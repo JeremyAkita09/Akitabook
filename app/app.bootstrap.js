@@ -1,0 +1,1 @@
+var app = angular.module("MobileTech", [ "ngRoute", "ngStorage", "ngMessages", "ngAnimate" ]);

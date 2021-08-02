@@ -1,0 +1,4 @@
+#DashboardPage p {
+    color: blue;
+    transition:all linear 0.5s;
+}

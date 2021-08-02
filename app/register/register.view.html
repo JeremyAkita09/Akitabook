@@ -1,0 +1,167 @@
+<div id="RegisterPage">
+    
+    <form ng-submit="ProcessRegistration()" name="register">
+        
+        <div class="form-group row">
+          
+        <label class="col-2 col-form-label">Username</label>
+        <div class="col-5">
+          
+        <input 
+        type="text" 
+        ng-model="username"
+        class="form-control" 
+        name="username"
+        required
+        ng-minlength="3"
+        >
+        
+        </div>
+        
+        </div>
+        
+        <!--message block-->
+        <div class="row">
+      
+      <div class="col-12">
+        
+        <div ng-messages="register.username.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please choose a username</div>
+          <div ng-message="minlength" class="alert alert-danger">The username must contain at least 4 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+        
+      </div>
+      
+    </div>
+        
+        <div class="form-group row">
+          
+        <label class="col-2 col-form-label">firstname</label>
+        <div class="col-5">
+        <input 
+        type="text" 
+        ng-model="firstname"
+        name="firstname"
+        required
+        ng-minlength="3"
+        >
+        </div>
+        
+         <!--message block-->
+        </div>
+        <div class="row">
+      
+      <div class="col-12">
+        
+        <div ng-messages="register.firstname.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please choose a firstname</div>
+          <div ng-message="minlength" class="alert alert-danger">The firstname must contain at least 3 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+        
+      </div>
+      
+    </div>
+        
+         <div class="form-group row">
+        <label class="col-2 col-form-label">surename</label>
+        <input 
+        type="text" 
+        ng-model="surename"
+        name="surename"
+        required
+        ng-minlength="4"
+        >
+        </div>
+        <div class="row">
+      
+      <div class="col-12">
+        
+        <div ng-messages="register.surename.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please choose a firstname</div>
+          <div ng-message="minlength" class="alert alert-danger">The username must contain at least 4 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+        
+      </div>
+      
+    </div>
+        
+        <div class="form-group row">
+         <label class="col-2 col-form-label">City name</label>
+        <input 
+        type="text" 
+        ng-model="cityname"
+        name="cityname"
+        required
+        ng-minlength="4"
+        >
+        </div>
+         <div class="col-12">
+        
+        <div ng-messages="register.cityname.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please please type in the cityname</div>
+          <div ng-message="minlength" class="alert alert-danger">The city name must contain at least 4 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+        
+      </div>
+        <div class="form-group row">
+        <label class="col-2 col-form-label">Password</label>
+        <input
+        type="password" 
+        ng-model="password"
+        name="password"
+        required
+        ng-minlength="4"
+        >
+        </div>
+         <div class="col-12">
+        
+        <div ng-messages="register.password.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please please type in the password</div>
+          <div ng-message="minlength" class="alert alert-danger">The city name must contain at least 4 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+        
+      </div>
+      
+        <div class="form-group row">
+        <label class="col-2 col-form-label">Password Repeat</label>
+        <input 
+        type="password" 
+        ng-model="passwordRepeat"
+        name="passwordRepeat"
+        required
+        ng-minlength="4"
+        >
+        </div>
+         <div class="col-12">
+        
+        <div ng-messages="register.passwordRepeat.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please please type in the password</div>
+          <div ng-message="minlength" class="alert alert-danger">The city name must contain at least 4 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+        
+      </div>
+      <div class="text-centre">
+        <input type="submit" value="Register">
+        </div>
+    </form>
+    
+    <p>
+        Already have an account? <a href="#!/login">Login!</a>
+    </p>
+    
+    <!-- TODO: remove this once development is done -->
+    <div>
+        <ul>
+            <!-- Call the GetUsers() method and use the array it returns -->
+            <li ng-repeat="user in GetUsers()">
+                Username: {{ user.username }} / Firstname: {{ user.firstname }} / Surename: {{ user.surename }} /City: {{ user.cityname }} /Password: {{ user.password }} / Password: {{ user.password }}
+        </ul>
+    </div>
+    
+</div>

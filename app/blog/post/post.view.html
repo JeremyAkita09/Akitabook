@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-4">
+		<div class="row">
+			<div class="col-13">
+				<span class="avatar">
+          <img ng-src="{{ post.author.avatar }}">
+        </span>
+      </div>
+    </div>
+    <div class="row text-left">
+      <div class="col-sm-5">
+        <span class="buttons">
+          <button class="btn btn-danger" ng-click="DeletePost()">Delete</button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="row">
+      <div class="col-12">
+<span class="contents">{{post.contents}}</span>
+
+ </div>
+    </div>
+<span class="author" ng-class="{ 'font-weight-bold': (post.author.username === currentAuthor.username) }">
+    {{post.author.username}} 
+    <!-- if the author is the same as the currentAuthor, then print the text, otherwise don't print anything -->
+    {{ (post.author.username === currentAuthor.username) ? ' (YOU)' : '' }}
+</span>,
+<!-- more information about the date filter can be found here: https://docs.angularjs.org/api/ng/filter/date -->
+<span class="created-at">{{post.createdAt | date : "medium"}}</span>
+</div>
+</div>

@@ -1,0 +1,48 @@
+<div id="BlogPage">
+
+  <!-- only show the search box if we're looking at topics -->
+    <form>
+      <div class="form-group text-center">
+      <input type="text" placeholder="search query (topic title, post author & contents)" ng-model="searchQuery" ng-change="filterResults()" class="form-control">
+      </div>
+    </form>
+  
+    <blog-add-post data="data"></blog-add-post>
+
+    <!-- Show Blog Posts -->
+    <ul>
+      <li class="heading">
+        Posts
+      </li>
+      <li ng-repeat="post in searchResults" class="post">
+        <blog-post post="post" data="data"></blog-post>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

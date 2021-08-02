@@ -1,0 +1,64 @@
+
+@import url('./dashboard/dashboard.styles.css');
+@import url('./login/login.styles.css');
+@import url('./register/register.styles.css');
+@import url('./profile/profile.styles.css');
+@import url('./navigation/navigation.styles.css');
+@import url('./forum/forum.styles.css');
+@import url('./blog/blog.styles.css');
+/* Animations list: 
+https://github.com/daneden/animate.css 
+*/
+
+/* Also look at the "animate" property: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+
+  You may add animation delays by throwing in a second number (see below)
+*/
+
+/* this class is attached to ng-view div in index.html and is animated whenever pages change */
+.main-content {
+  opacity: 0.5; /* ensure full opacity by default */
+}
+
+.main-content.ng-enter {
+  opacity: 0; /* while it's getting ready to animate, start with full transparency and allow the fadeIn animation to happen */
+}
+
+.ng-enter {
+  animation: fadeIn 0.9s 0.5s; /* added a delay to allow previous animation to finish, as first the current element will leave and then the new one will enter */
+}
+
+.ng-leave {
+  animation: fadeOut 0.9s;
+}
+
+.ng-move {
+  animation: flipInX 1s;
+}
+
+/* Attach class 'dont-animate' to any element you do not wish to exhibit any animations
+*/
+
+.dont-animate.ng-enter {
+  animation: none !important;
+}
+
+.dont-animate.ng-leave {
+  animation: none !important;
+}
+
+.dont-animate.ng-move {
+  animation: none !important;
+}
+
+.dont-animate .ng-enter {
+  animation: none !important;
+}
+
+.dont-animate .ng-leave {
+  animation: none !important;
+}
+
+.dont-animate .ng-move {
+  animation: none !important;
+}

@@ -1,0 +1,39 @@
+#BlogPage ul {
+  list-style: none;
+}
+
+#BlogPage ul .heading {
+  font-weight: bold;
+}
+
+#BlogPage {
+  background-color: lightblue;
+}
+
+#BlogPage .post {
+  border-bottom: 1px dotted black;
+  margin: 5px;
+}
+
+#BlogPage .post .avatar img {
+  max-width: 25px;
+}
+
+#BlogPage .post .contents {
+  display: block;
+  font-size: 1em;
+}
+
+#BlogPage .post .author {
+
+  font-size: 0.7em;
+}
+
+#BlogPage .post .created-at {
+  font-size: 0.6em;
+}
+
+#BlogPage .post .buttons {
+  display: block;
+  text-align: right;
+}

@@ -1,0 +1,44 @@
+<div id="ForumPage">
+<!-- only show the search box if we're looking at topics -->
+  
+  
+  <!-- Topics -->
+  <div class="p-3 mb-2 bg-primary text-white">
+  <div ng-if=" forumView == 'topics' ">
+  
+    <forum-add-topic data="data"></forum-add-topic>
+
+    <!-- Show Topics -->
+    <ul>
+      <li class="heading">
+        Topics
+      </li>
+      <li ng-repeat="topic in data.topics" class="topic" ng-click="TopicMakeActive(topic)">
+        <forum-topic topic="topic" data="data"></forum-topic>
+      </li>
+    </ul>
+
+  </div>
+</div>
+  <!-- Show Posts for Active Topic -->
+	<div class="p-3 mb-2 bg-info text-white">
+  <div ng-if=" forumView == 'posts' ">
+
+    <div class="backToTopicsButton">
+      <button class="btn btn-primary" ng-click="BackToTopics()">Back to topics</button>
+    </div>
+</div>
+    <ul>
+      <li class="heading">
+        Posts
+      </li>
+      <li ng-repeat="post in activeTopic.posts" class="post">
+        <forum-post post="post" topic="activeTopic"></forum-post>
+      </li>
+    </ul>
+
+    <forum-add-post topic="activeTopic" data="data"></forum-add-post>
+
+  </div>
+
+</div>

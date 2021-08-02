@@ -1,0 +1,111 @@
+<div id="ProfilePage">
+
+
+	<form ng-submit="profile.$valid && Update()" name="profile" novalidate>
+
+		<div class="row">
+
+
+			<div class="form-group img-rounded img-responsive profile-image" ng-show="showUserProfileImage">
+				<img id="userProfileImagePreview" ng-src="{{ userProfileImage }}">
+      </div>
+      
+      <div class="form-group">
+        
+        <label for="userProfileImageUpload">Profile Image</label>
+        <input class="form-control" type="file" accept="image/*" id="userProfileImageUpload" name="userProfileImageUpload">
+        
+      </div>
+
+    </div>
+    
+    <div class="p-3 mb-2 bg-primary text-white">
+      <div class="form-group row">
+
+        <label class="col-2 col-form-label">First Name</label>
+        <input ng-model="userProfile.firstname" name="firstName" required ng-minlength="4">
+      </div>
+    </div>
+    
+      <div class="row">
+
+        <div class="col-12">
+
+          <div ng-messages="profile.firstName.$error" role="alert">
+            <div ng-message="required" class="alert alert-danger">Please type in your first name</div>
+            <div ng-message="minlength" class="alert alert-danger">The first name must contain at least 2 characters</div>
+            <div ng-message-default class="alert alert-danger">This field has an input error</div>
+          </div>
+
+        </div>
+      </div>
+    
+    <div class="p-3 mb-2 bg-primary text-white">
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Last Name</label>
+        <input ng-model="userProfile.surename" name="surename" required ng-minlength="2">
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-12">
+
+        <div ng-messages="profile.sureName.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please type in your last name</div>
+          <div ng-message="minlength" class="alert alert-danger">The first name must contain at least 2 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+
+      </div>
+
+    </div>
+    
+    <div class="p-3 mb-2 bg-primary text-white">
+      <div class="form-group row">
+        <label class="col-2 col-form-label">City Name</label>
+        <input ng-model="userProfile.cityname" name="cityname" required ng-minlength="2">
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-12">
+
+        <div ng-messages="profile.cityame.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please type in your city name</div>
+          <div ng-message="minlength" class="alert alert-danger">The first name must contain at least 2 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+
+      </div>
+
+    </div>
+
+<div class="p-3 mb-2 bg-primary text-white">
+      <div class="form-group row">
+        <label class="col-2 col-form-label">password </label>
+        <input ng-model="userProfile.password" type="password" name="password" required ng-minlength="2">
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-12">
+
+        <div ng-messages="profile.password.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please type in your password</div>
+          <div ng-message="minlength" class="alert alert-danger">The password must contain at least 7 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <input type="submit" value="Update" class="btn btn-primary">
+
+    </div>
+
+
+
+  </form>
+</div>

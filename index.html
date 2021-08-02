@@ -1,0 +1,153 @@
+<!doctype html>
+<html ng-app="MobileTech">
+
+<head>
+	<title>Akita Book App</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Third Party Libraries and Tools (i.e. AngularJS, AngularJS Plugins, Bootstrap, etc.) -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js">
+
+	</script>
+
+	<!-- BOOTSTRAP 4.1 JavaScript Libraries -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-messages.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-animate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous">
+
+	</script>
+
+
+	<!-- BOOTSTRAP 4.1 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+
+
+	<!-- Third Party CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+	<!-- APP CSS -->
+	<link href="app/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+
+		<!-- HEADER -->
+		<!--<div class="row">-->
+
+		<!--  <div class="col-12">-->
+
+		<!--    <header>-->
+
+		<!--      <h5>Welcome to our App!</h5>-->
+
+		<!--    </header>-->
+
+		<!--  </div>-->
+
+		<!--</div>-->
+
+		<!-- NAVIGATION -->
+		<div class="row">
+
+			<div class="col-12">
+
+				<div ng-include="'app/navigation/navigation.view.html'"></div>
+
+			</div>
+
+		</div>
+
+		<!-- MAIN CONTENT (PAGES) -->
+		<div class="row">
+
+			<div class="col-12">
+
+				<div class="container-fluid">
+
+					<div class="row p-1">
+
+						<div ng-view class="col-12">
+							This is where our app contents.
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- FOOTER -->
+		<div class="row">
+
+			<div class="col-12">
+
+				<footer class="text-center">
+
+					<h6>AkitaBook &copy; 2018</h6>
+
+				</footer>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- APP FILES -->
+	<script src="app/app.bootstrap.js">
+
+	</script>
+
+	<!-- SERVICES -->
+	<script src="app/services/auth.service.js">	</script>
+
+  <!-- CONFIG -->
+  <script src="app/app.config.js"></script>
+  <script src="app/routes.config.js"></script>
+  <script src="app/security.config.js"></script>
+
+	<!-- CONTROLLERS -->
+	<script src="app/dashboard/dashboard.controller.js">	</script>
+	<script src="app/login/login.controller.js"></script>
+	<script src="app/logout/logout.controller.js"></script>
+	<script src="app/navigation/navigation.controller.js"></script>
+	<script src="app/register/register.controller.js"></script>
+	<script src="app/profile/profile.controller.js"></script>
+	<script src="app/forum/forum.controller.js"></script>
+	<script src="app/forum/post/post.directive.js"></script>
+	<script src="app/forum/topic/topic.directive.js"></script>
+	<script src="app/forum/forms/add-topic/add-topic.directive.js"></script>
+	<script src="app/blog/blog.controller.js"></script>
+	<script src="app/blog/post/post.directive.js"></script>
+	<script src="app/blog/forms/add-post/add-post.directive.js"></script>
+	<script src="app/forum/forms/add-post/add-post.directive.js"></script>
+	<script src="app/blog/blog.controller.js"></script>
+</body>
+
+</html>

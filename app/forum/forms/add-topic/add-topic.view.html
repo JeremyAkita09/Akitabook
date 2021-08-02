@@ -1,0 +1,43 @@
+<form ng-submit="forum.$valid && AddTopic()" name="forum" novalidate>
+
+	<div class="form-group row">
+
+		<!-- <label class="col-xs-12 col-sm-2 col-form-label">Topic Title</label> -->
+
+		<div class="col-10">
+
+			<input 
+            type="text" 
+            ng-model="topicData.title" 
+            class="form-control" 
+            name="topicTitle"
+            placeholder="topic title"
+            required
+            ng-minlength="3"
+          >
+
+        </div>
+
+        <div class="col-2 text-center">
+
+          <input type="submit" value="Create" class="btn btn-primary">
+
+        </div>
+
+      </div>
+      
+      <div class="row">
+        
+        <div class="col-12">
+          
+          <div ng-messages="forum.$dirty && forum.topicTitle.$error" role="alert">
+            <div ng-message="required" class="alert alert-danger">Please type in a title for this new Topic</div>
+            <div ng-message="minlength" class="alert alert-danger">The topic title must contain at least 3 characters</div>
+            <div ng-message-default class="alert alert-danger">This field has an input error</div>
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </form>

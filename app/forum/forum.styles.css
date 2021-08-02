@@ -1,0 +1,58 @@
+#ForumPage ul {
+  list-style: none;
+}
+
+#ForumPage ul .heading {
+  font-weight: bold;
+}
+
+#ForumPage .topic {
+  border-bottom: 3px dotted black;
+  line-height: normal;
+}
+
+#ForumPage .topic .title {
+  font-weight: bold;
+  color: black;
+  font-style:normal 10eg;
+}
+
+#ForumPage .topic .title:hover {
+  text-decoration: none;
+  color: lightblue;
+  cursor: pointer;
+}
+
+#ForumPage .topic .buttons {
+  display: block;
+  text-align: right;
+  /* float: right; */
+}
+
+#ForumPage .backToTopicsButton {
+  text-align: right;
+}
+
+#ForumPage .post {
+  border-bottom: 1px dotted black;
+  margin: 5px;
+}
+
+#ForumPage .post .contents {
+  display: block;
+  font-size: 1em;
+  font-style:normal 10eg;
+}
+
+#ForumPage .post .author {
+  font-size: 0.7em;
+}
+
+#ForumPage .post .created-at {
+  font-size: 0.6em;
+}
+
+#ForumPage .post .buttons {
+  display: block;
+  text-align: right;
+}

@@ -1,0 +1,95 @@
+<div id="LoginPage">
+
+  <form ng-submit="login.$valid && ProcessLogin()" name="login" novalidate>
+
+    <div class="form-group row">
+
+      <label class="col-xs-12 col-sm-2 col-form-label">Username</label>
+
+      <div class="col-xs-12 col-sm-10">
+
+        <input 
+          type="text" 
+          ng-model="username" 
+          class="form-control" 
+          name="username"
+          required
+          ng-minlength="4"
+        >
+
+      </div>
+
+    </div>
+    
+    <div class="row">
+      
+      <div class="col-12">
+        
+        <div ng-messages="login.username.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please type in a username</div>
+          <div ng-message="minlength" class="alert alert-danger">The username must contain at least 4 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    <div class="form-group row">
+
+      <label class="col-xs-12 col-sm-2 col-form-label">Password</label>
+
+      <div class="col-xs-12 col-sm-10">
+
+        <input 
+          type="password" 
+          ng-model="password" 
+          class="form-control" 
+          name="password"
+          required
+          ng-minlength="4"
+          ng-maxlength="16"
+        >
+
+      </div>
+
+    </div>
+    
+    <div class="row">
+      
+      <div class="col-12">
+        
+        <div ng-messages="login.$dirty && login.password.$error" role="alert">
+          <div ng-message="required" class="alert alert-danger">Please type in a password</div>
+          <div ng-message="minlength" class="alert alert-danger">The password must contain at least 4 characters</div>
+          <div ng-message="maxlength" class="alert alert-danger">The password must contain at most 16 characters</div>
+          <div ng-message-default class="alert alert-danger">This field has an input error</div>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    <div class="text-center">
+
+      <input type="submit" value="Login" class="btn btn-primary">
+
+    </div>
+
+  </form>
+
+  <p>
+    Need an account? <a href="#!/register">Register!</a>
+  </p>
+
+  <!-- TODO: remove this once development is done -->
+  <div>
+    <ul>
+      <!-- Call the GetUsers() method and use the array it returns -->
+      <li ng-repeat="user in GetUsers()">
+        Username: {{ user.username }} / Password: {{ user.password }}
+      </li>
+    </ul>
+  </div>
+
+</div>

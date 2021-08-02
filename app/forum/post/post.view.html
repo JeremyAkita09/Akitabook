@@ -1,0 +1,12 @@
+<span class="contents">{{post.contents}}</span>
+<!-- ng-class allows you to set a class on an element if a condition is true; in this case, set the 'font-weight-bold' Bootstrap class if the post author is the same as the currentAuthor; more information can be found here: https://docs.angularjs.org/api/ng/directive/ngClass -->
+<span class="author" ng-class="{ 'font-weight-bold': (post.author === currentAuthor) }">
+    {{post.author}} 
+    <!-- if the author is the same as the currentAuthor, then print the text, otherwise don't print anything -->
+    {{ (post.author === currentAuthor) ? ' (YOU)' : '' }}
+</span>,
+<!-- more information about the date filter can be found here: https://docs.angularjs.org/api/ng/filter/date -->
+<span class="created-at">{{post.createdAt | date : "medium"}}</span>
+<span class="buttons">
+  <button class="btn btn-danger" ng-click="DeletePost()">Delete</button>
+</span>

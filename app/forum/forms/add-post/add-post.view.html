@@ -1,0 +1,43 @@
+<form ng-submit="forum.$valid && AddPost()" name="forum" novalidate>
+
+      <div class="form-group row">
+
+        <!-- <label class="col-xs-12 col-sm-2 col-form-label">Post Contents</label> -->
+
+        <div class="col-10">
+
+          <input 
+            type="text" 
+            ng-model="postData.contents" 
+            class="form-control" 
+            name="postContents"
+            placeholder="post contents"
+            required
+            ng-minlength="3"
+          >
+
+        </div>
+
+        <div class="col-2 text-center">
+
+          <input type="submit" value="Reply" class="btn btn-primary">
+
+        </div>
+
+      </div>
+      
+      <div class="row">
+        
+        <div class="col-12">
+          
+          <div ng-messages="forum.$dirty && forum.postContents.$error" role="alert">
+            <div ng-message="required" class="alert alert-danger">Please type in some contents for this new Post</div>
+            <div ng-message="minlength" class="alert alert-danger">The post contents must contain at least 4 characters</div>
+            <div ng-message-default class="alert alert-danger">This field has an input error</div>
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </form>
